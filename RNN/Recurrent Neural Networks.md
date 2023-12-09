@@ -1,6 +1,6 @@
 # Recurrent Neural Networks
 
-![RNN type](C:/Users/kang1/Desktop/LLM/Paper/Img/RNN0.png)
+![RNN type](https://github.com/kang952175/Paper/blob/main/Img/RNN0.png?raw=true)
 
 - one to one : Image classification
 - one to many : Image captioning
@@ -10,7 +10,7 @@
 
 RNNs are a class of neural networks that allow previous outputs to be used as inputs while having hidden states.
 
-![Untitled](Recurrent%20Neural%20Networks%20f062d59a492e40aaa96ffe5593d01683/Untitled%201.png)
+![Untitled](https://github.com/kang952175/Paper/blob/main/Img/RNN1.png?raw=true)
 
 RNNs have an internal state that is updated as a sequence is processed.
 
@@ -28,7 +28,7 @@ so, the new value is determined by its old value as well as the input.
 
 and then it gets the next input and repeats the same thing again and again.
 
-![Untitled](Recurrent%20Neural%20Networks%20f062d59a492e40aaa96ffe5593d01683/Untitled%202.png)
+![Untitled](https://github.com/kang952175/Paper/blob/main/Img/RNN2.png?raw=true)
 
 We can express with expanded view so instead of that feedback loop.
 
@@ -43,7 +43,7 @@ RNNs are a type of neural network that can be used to model sequence data.
 
 Simply said, recurrent neural networks can anticipate sequential data in a way that other algorithms can’t.
 
-![*Source: Quora.com*](Recurrent%20Neural%20Networks%20f062d59a492e40aaa96ffe5593d01683/Untitled%203.png)
+![*Source: Quora.com*](https://github.com/kang952175/Paper/blob/main/Img/RNN3.png?raw=true)
 
 *Source: Quora.com*
 
@@ -70,7 +70,7 @@ and then it updates to the new hidden states.
 
 and we generate some outpus from there
 
-![source: [https://medium.com/@navarai/the-architecture-of-a-basic-rnn-eb5ffe7f571e](https://medium.com/@navarai/the-architecture-of-a-basic-rnn-eb5ffe7f571e)](Recurrent%20Neural%20Networks%20f062d59a492e40aaa96ffe5593d01683/Untitled%204.png)
+![source: [https://medium.com/@navarai/the-architecture-of-a-basic-rnn-eb5ffe7f571e](https://medium.com/@navarai/the-architecture-of-a-basic-rnn-eb5ffe7f571e)](https://github.com/kang952175/Paper/blob/main/Img/RNN4.png?raw=true)
 
 source: [https://medium.com/@navarai/the-architecture-of-a-basic-rnn-eb5ffe7f571e](https://medium.com/@navarai/the-architecture-of-a-basic-rnn-eb5ffe7f571e)
 
@@ -84,7 +84,7 @@ source: [https://medium.com/@navarai/the-architecture-of-a-basic-rnn-eb5ffe7f571
     $y_t = W_{hy}h_t$
     
 
-![Untitled](Recurrent%20Neural%20Networks%20f062d59a492e40aaa96ffe5593d01683/Untitled%205.png)
+![Untitled](https://github.com/kang952175/Paper/blob/main/Img/RNN5.png?raw=true)
 
 - Again, all weights are shared across time!
     - During the forward pass, the same weights are used rpetitively.
@@ -108,7 +108,7 @@ they always share weights to encode inputs and apply to the sequence and the gen
     - Often, intermediate hidden states are used as well when the output is determined.
         - The sequence is too long. so then feeding the input in the given order tends to remember the recent inputs are better thean the previous input(the earlier inputs)  so these ealier hidden states are better representing the earlier input.
 
-![Untitled](Recurrent%20Neural%20Networks%20f062d59a492e40aaa96ffe5593d01683/Untitled%206.png)
+![Untitled](https://github.com/kang952175/Paper/blob/main/Img/RNN6.png?raw=true)
 
 it extracted its meaning and then the semantics of the entire video is compactly represented within this hidden states after consuming all of these input frames and thend based on this we output.
 
@@ -117,7 +117,7 @@ it extracted its meaning and then the semantics of the entire video is compactly
     $\mathbf h_t = tanh(\mathbf W_{hh} \mathbf h_{t-1} + \mathbf W_{xh}\mathbf x_{t-1})$
     - **Autoregressive** input: For time series data, the lagged(autoregressive) values of the time series are used as inputs to a neural network.
     
-    ![Untitled](Recurrent%20Neural%20Networks%20f062d59a492e40aaa96ffe5593d01683/Untitled%207.png)
+    ![Untitled](https://github.com/kang952175/Paper/blob/main/Img/RNN7.png?raw=true)
     
 
 **Autoregressive : we input the output from the previous step.**
@@ -128,7 +128,7 @@ it extracted its meaning and then the semantics of the entire video is compactly
     - From this single vector, the decoder generates output sequence.
     - Called Sequence-to-sequence, or seq2seq.
 
-![Untitled](Recurrent%20Neural%20Networks%20f062d59a492e40aaa96ffe5593d01683/Untitled%208.png)
+![Untitled](https://github.com/kang952175/Paper/blob/main/Img/RNN8.png?raw=true)
 
 It just stores the meaning or semantics of this input sequence in the compact representation of the hidden states.
 
@@ -179,7 +179,7 @@ print(hn.shape) # [2, 3, 20]
 
 - we may put more than one hidden layers.
 
-![Untitled](Recurrent%20Neural%20Networks%20f062d59a492e40aaa96ffe5593d01683/Untitled%209.png)
+![Untitled](https://github.com/kang952175/Paper/blob/main/Img/RNN9.png?raw=true)
 
 RNN doesn’t necessarily be just a single layer.
 
@@ -187,7 +187,7 @@ so, you can actually stack multiple layers of hidden states from the input
 
 ## backpropagation of RNN
 
-![source: [https://mmuratarat.github.io/2019-02-07/bptt-of-rnn](https://mmuratarat.github.io/2019-02-07/bptt-of-rnn)](Recurrent%20Neural%20Networks%20f062d59a492e40aaa96ffe5593d01683/Untitled%2010.png)
+![source: [https://mmuratarat.github.io/2019-02-07/bptt-of-rnn](https://mmuratarat.github.io/2019-02-07/bptt-of-rnn)](https://github.com/kang952175/Paper/blob/main/Img/RNN10.png?raw=true)
 
 source: [https://mmuratarat.github.io/2019-02-07/bptt-of-rnn](https://mmuratarat.github.io/2019-02-07/bptt-of-rnn)
 
@@ -201,7 +201,7 @@ source: [https://mmuratarat.github.io/2019-02-07/bptt-of-rnn](https://mmuratarat
 
 Gradient Flow Problem with Vanilla RNN
 
-![Untitled](Recurrent%20Neural%20Networks%20f062d59a492e40aaa96ffe5593d01683/Untitled%2011.png)
+![Untitled](https://github.com/kang952175/Paper/blob/main/Img/RNN11.png?raw=true)
 
 Backporp from h_t to h_{t-1} multiplies by W_hh
 
@@ -215,7 +215,7 @@ We need the partial derivative of the entire loss (with chain-rule)
 
 What does this formula mean?
 
-![Untitled](Recurrent%20Neural%20Networks%20f062d59a492e40aaa96ffe5593d01683/Untitled%2012.png)
+![Untitled](https://github.com/kang952175/Paper/blob/main/Img/RNN12.png?raw=true)
 
 That actually picks at the input is zero which is one.
 
@@ -232,7 +232,7 @@ Notation
 
 For simplicity, let’s use “FC” (fully-connected) box instead of each weight maatrix.
 
-![Untitled](Recurrent%20Neural%20Networks%20f062d59a492e40aaa96ffe5593d01683/Untitled%2013.png)
+![Untitled](https://github.com/kang952175/Paper/blob/main/Img/RNN13.png?raw=true)
 
 ⇒ Long Short Term Memory (LSTM)
 
